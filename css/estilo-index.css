@@ -8,7 +8,7 @@
     --destaque-principal: #086bb1;
     --destaque-secundario: #12508f;
 
-    --escuro-secundario: #07101b;
+    --escuro-secundario: #2a2d36;
     --escuro-principal: #000000;
 
     /*ESPAÇO*/
@@ -18,10 +18,10 @@
     --espaco-xgra: 30px;
     
     /*TIPOGRAFIA*/
-    --fonte-peq: 8px;
-    --fonte-med: 16px;
-    --fonte-gra: 32px;
-    --fonte-xgra: 64px;
+    --fonte-peq: 16px;
+    --fonte-med: 18px;
+    --fonte-gra: 24px;
+    --fonte-xgra: 48px;
 
     /* RADIUS */
     --radius-peq: 8px;
@@ -50,10 +50,15 @@ header{
     cursor: pointer;
 }
 
+.home{
+    max-width: 100px;
+}
+
 .calad__apresentacao{
     display: flex;
     flex-flow: column;
     justify-content: center;
+    gap: var(--espaco-gra);
 
     height: 400px;
     padding-left: 15px;
@@ -63,25 +68,80 @@ header{
 }
 
 .calad__apresentacao > h1{
-    font-size: var(--fonte-xgra);
-    margin-bottom: var(--espaco-gra);
+    font-size: 64px;
 }
 
 .calad__apresentacao > p{
     color: var(--texto-descricao);
     font-size: var(--fonte-med);
+    padding-left: 3px;
 }
 
 .calad__navegacao{
     color: var(--texto-principal);
-    padding: 10px;
+    padding: var(--espaco-med);
+    padding-block: 40px;
     background-color: var(--escuro-secundario);
 }
 
-.navegacao-da-secao > a{
-    color: var(--texto-principal);
+.calad__navegacao > h2{
+    font-size: var(--fonte-med);
+    font-weight: lighter;
 }
 
+.navegacao-da-secao{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: var(--espaco-med);
+    padding-top: 20px;
+}
+
+.item-navegacao{
+    display: grid;
+    grid-template-columns: 155px 200px;
+    grid-template-rows: 1fr 5fr;
+}
+
+.item-navegacao__imagem{
+    grid-row: 1/3;
+}
+
+.item-navegacao__imagem img{
+    width: 130px;
+    border-radius: 50%;
+
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: left;
+    overflow: hidden;
+}
+
+.item-navegacao__nome{
+    color: var(--texto-principal);
+    font-size: var(--fonte-med);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.item-navegacao > p{
+    color: var(--texto-descricao);
+}
+
+.botao-de-proximo{
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 50%;
+
+    color: var(--texto-principal);
+    background-color: var(--escuro-principal);
+    cursor: pointer;
+    transition: border 0.2s;
+}
+
+.botao-de-proximo:hover{
+    border: 1px solid var(--texto-principal);
+}
 
 /* === ESTADOS === */
 .escondido{
