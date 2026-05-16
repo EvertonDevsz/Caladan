@@ -15,13 +15,13 @@
     --espaco-peq: 8px;
     --espaco-med: 15px;
     --espaco-gra: 25px;
-    --espaco-xgra: 30px;
+    --espaco-xgra: 40px;
     
     /*TIPOGRAFIA*/
     --fonte-peq: 16px;
     --fonte-med: 18px;
     --fonte-gra: 24px;
-    --fonte-xgra: 48px;
+    --fonte-xgra: 46px;
 
     /* RADIUS */
     --radius-peq: 8px;
@@ -38,8 +38,6 @@
 header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-
     padding: var(--espaco-gra);
     background-color: var(--escuro-principal);
 }
@@ -79,8 +77,8 @@ header{
 
 .calad__navegacao{
     color: var(--texto-principal);
-    padding: var(--espaco-med);
     padding-block: 40px;
+    padding-inline: var(--espaco-med);
     background-color: var(--escuro-secundario);
 }
 
@@ -92,8 +90,8 @@ header{
 .navegacao-da-secao{
     display: flex;
     justify-content: space-between;
-    padding-inline: var(--espaco-med);
-    padding-top: 20px;
+    padding: 20px;
+    padding-bottom: 0;
 }
 
 .item-navegacao{
@@ -143,6 +141,48 @@ header{
     border: 1px solid var(--texto-principal);
 }
 
+.artigos{
+    padding-block: 50px;
+}
+
+.artigos h2{
+    margin-top: 45px;
+    padding-inline:var(--espaco-med) ;
+    font-size: var(--fonte-med);
+    font-weight: lighter;
+}
+
+.artigo__conteudo{
+    margin-inline: 20px;
+    margin-block: 40px;
+}
+
+.artigo__conteudo h3{
+    margin-bottom: 40px;
+    font-size: var(--fonte-xgra);
+    line-height: 40px;
+}
+
+.artigo__conteudo p{
+    margin-bottom: 20px;
+}
+
+.artigo__conteudo a{
+    color: black;
+    font-size: var(--fonte-gra);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-icone{
+    font-size: var(--fonte-med);
+    color: var(--especial);
+    transition: color 0.2s;
+}
+
+.artigo__imagem{
+    width: 100%;
+}
 /* === ESTADOS === */
 .escondido{
     display: none;
