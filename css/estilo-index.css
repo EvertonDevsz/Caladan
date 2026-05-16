@@ -1,29 +1,53 @@
 :root{
+    /* CORES */
     --especial: #800b1f;
+
     --texto-principal: #dadada;
     --texto-descricao: #9299a3;
+
     --destaque-principal: #086bb1;
     --destaque-secundario: #12508f;
-    --escuro-secundario: #0d2944;
-    --escuro-principal: #07101b;
+
+    --escuro-secundario: #07101b;
+    --escuro-principal: #000000;
+
+    /*ESPAÇO*/
+    --espaco-peq: 8px;
+    --espaco-med: 15px;
+    --espaco-gra: 25px;
+    --espaco-xgra: 30px;
+    
+    /*TIPOGRAFIA*/
+    --fonte-peq: 8px;
+    --fonte-med: 16px;
+    --fonte-gra: 32px;
+    --fonte-xgra: 64px;
+
+    /* RADIUS */
+    --radius-peq: 8px;
+    --radius-med: 16px;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    padding: var(--espaco-gra);
     background-color: var(--escuro-principal);
 }
 
 #menu-hamburguer{
     font-size: 1.3em;
     color: var(--texto-principal);
+    cursor: pointer;
 }
 
 .calad__apresentacao{
@@ -34,18 +58,18 @@ header{
     height: 400px;
     padding-left: 15px;
 
-    
     color: var(--texto-principal);
-    line-height: 50px;
-    background-image: url(../images/Mapa-Referencia.png);
+    background: url(../images/fundo-calad.jfif) center / contain;
 }
 
 .calad__apresentacao > h1{
-    font-size: 2.5em;
+    font-size: var(--fonte-xgra);
+    margin-bottom: var(--espaco-gra);
 }
 
 .calad__apresentacao > p{
     color: var(--texto-descricao);
+    font-size: var(--fonte-med);
 }
 
 .calad__navegacao{
@@ -54,11 +78,9 @@ header{
     background-color: var(--escuro-secundario);
 }
 
-.navegacao-secao > a{
+.navegacao-da-secao > a{
     color: var(--texto-principal);
 }
-
-
 
 
 /* === ESTADOS === */
