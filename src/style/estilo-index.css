@@ -41,19 +41,55 @@
 
 header{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: var(--espaco-gra);
+    position: relative;
+    align-items: center;
+    grid-template-columns: 6fr 7fr;
+    padding: 18px;
     background-color: var(--escuro-principal);
 }
 
-#menu-hamburguer{
-    font-size: 1.3em;
+.navegacao-principal{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 70px;
+    z-index: 10;
+
+    max-height: 680px;
+    width: 100%;
+
+    
+    padding: var(--espaco-gra);
+    padding-top: 45px;
+
+    background-color: var(--escuro-principal);
+    overflow-y: auto;
+}
+
+.navegacao-principal a{
+    margin-block: var(--espaco-med);
     color: var(--claro-principal);
+    text-decoration: none;
+}
+
+.navegacao-principal a:hover{
+    text-decoration: underline;
+}
+
+#menu-hamburguer{
+    width: 27px;
+    color: var(--claro-principal);
+    font-size: 1.4em;
     cursor: pointer;
 }
 
 .home{
     max-width: 100px;
+}
+
+.home img{
+    width: 45px;
+    border-radius: 50%;
 }
 
 .calad__apresentacao{
@@ -62,11 +98,11 @@ header{
     justify-content: center;
     gap: var(--espaco-gra);
 
-    height: 400px;
+    height: 690px;
     padding-left: 15px;
 
     color: var(--claro-principal);
-    background: url(../assets/images/fundo-calad.jfif) center / contain;
+    background: url(../assets/images/fundo-calad.jfif) center / auto;
 }
 
 .calad__apresentacao > h1{
