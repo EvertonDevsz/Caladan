@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 :root{
     /* CORES */
     --especial: #800b1f;
 
-    --texto-principal: #dadada;
-    --texto-descricao: #9299a3;
+    --claro-principal: #dadada;
+    --claro-secundario: #9299a3;
 
     --destaque-principal: #086bb1;
     --destaque-secundario: #12508f;
@@ -22,6 +24,8 @@
     --fonte-med: 18px;
     --fonte-gra: 24px;
     --fonte-xgra: 46px;
+
+    --fonte-h2: "Oswald", sans-serif;
 
     /* RADIUS */
     --radius-peq: 8px;
@@ -44,7 +48,7 @@ header{
 
 #menu-hamburguer{
     font-size: 1.3em;
-    color: var(--texto-principal);
+    color: var(--claro-principal);
     cursor: pointer;
 }
 
@@ -61,8 +65,8 @@ header{
     height: 400px;
     padding-left: 15px;
 
-    color: var(--texto-principal);
-    background: url(../images/fundo-calad.jfif) center / contain;
+    color: var(--claro-principal);
+    background: url(../assets/images/fundo-calad.jfif) center / contain;
 }
 
 .calad__apresentacao > h1{
@@ -70,21 +74,22 @@ header{
 }
 
 .calad__apresentacao > p{
-    color: var(--texto-descricao);
+    color: var(--claro-secundario);
     font-size: var(--fonte-med);
     padding-left: 3px;
 }
 
 .calad__navegacao{
-    color: var(--texto-principal);
+    color: var(--claro-principal);
     padding-block: 40px;
     padding-inline: var(--espaco-med);
     background-color: var(--escuro-secundario);
 }
 
 .calad__navegacao > h2{
+    font-family: var(--fonte-h2);
     font-size: var(--fonte-med);
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .navegacao-da-secao{
@@ -115,14 +120,14 @@ header{
 }
 
 .item-navegacao__nome{
-    color: var(--texto-principal);
+    color: var(--claro-principal);
     font-size: var(--fonte-med);
     font-weight: bold;
     text-decoration: none;
 }
 
 .item-navegacao > p{
-    color: var(--texto-descricao);
+    color: var(--claro-secundario);
 }
 
 .botao-de-proximo{
@@ -131,25 +136,37 @@ header{
     border: 1px solid rgb(104, 104, 104);
     border-radius: 50%;
 
-    color: var(--texto-principal);
+    color: var(--claro-principal);
     background-color: var(--escuro-principal);
     cursor: pointer;
     transition: border 0.2s;
 }
 
 .botao-de-proximo:hover{
-    border: 1px solid var(--texto-principal);
+    border: 1px solid var(--claro-principal);
 }
 
 .artigos{
     padding-block: 50px;
+    background-color: var(--claro-principal);
 }
 
 .artigos h2{
     margin-top: 45px;
     padding-inline:var(--espaco-med) ;
+
+    font-family: var(--fonte-h2);
     font-size: var(--fonte-med);
-    font-weight: lighter;
+    font-weight: normal;
+}
+
+.artigo p > a{
+    color: var(--especial);
+    font-weight: bold;
+}
+
+.artigo p > a:hover{
+    color: #ca1130;
 }
 
 .artigo__conteudo{
@@ -159,6 +176,7 @@ header{
 
 .artigo__conteudo h3{
     margin-bottom: 40px;
+    color: var(--escuro-secundario);
     font-size: var(--fonte-xgra);
     line-height: 40px;
 }
@@ -167,11 +185,15 @@ header{
     margin-bottom: 20px;
 }
 
-.artigo__conteudo a{
-    color: black;
+.artigo__conteudo .veja-mais{
+    color: var(--escuro-principal);
     font-size: var(--fonte-gra);
     font-weight: bold;
     text-decoration: none;
+}
+
+.artigo__conteudo .veja-mais:hover .link-icone{
+    color: #ca1130;
 }
 
 .link-icone{
