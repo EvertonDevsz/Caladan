@@ -36,6 +36,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -106,13 +109,14 @@ header{
 }
 
 .calad__apresentacao > h1{
-    font-size: 64px;
+    font-size: 5em;
 }
 
 .calad__apresentacao > p{
+    padding-left: 3px;
     color: var(--claro-secundario);
     font-size: var(--fonte-med);
-    padding-left: 3px;
+    font-family: monospace;
 }
 
 .calad__navegacao{
@@ -160,10 +164,15 @@ header{
     font-size: var(--fonte-med);
     font-weight: bold;
     text-decoration: none;
+    font-family: monospace;
 }
 
-.item-navegacao > p{
+.item-navegacao__descricao{
+    margin-top: 5px;
     color: var(--claro-secundario);
+    font-size: 1.1em;
+    line-height: 18px;
+    font-family: monospace;
 }
 
 .botao-de-proximo{
@@ -196,15 +205,6 @@ header{
     font-weight: normal;
 }
 
-.artigo p > a{
-    color: var(--especial);
-    font-weight: bold;
-}
-
-.artigo p > a:hover{
-    color: #ca1130;
-}
-
 .artigo__conteudo{
     margin-inline: 20px;
     margin-block: 40px;
@@ -219,6 +219,19 @@ header{
 
 .artigo__conteudo p{
     margin-bottom: 20px;
+    line-height: 25px;
+    font-family: monospace;
+    font-size: 1.2em;
+    text-indent: 15px;
+}
+
+.artigo__conteudo p > a{
+    color: var(--especial);
+    font-weight: bold;
+}
+
+.artigo__conteudo p > a:hover{
+    color: #ca1130;
 }
 
 .artigo__conteudo .veja-mais{
@@ -240,6 +253,7 @@ header{
 
 .artigo__imagem{
     width: 100%;
+    max-width: 880px;
 }
 /* === ESTADOS === */
 .escondido{
