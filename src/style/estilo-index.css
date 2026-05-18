@@ -26,10 +26,6 @@
     --fonte-xgra: 46px;
 
     --fonte-h2: "Oswald", sans-serif;
-
-    /* RADIUS */
-    --radius-peq: 8px;
-    --radius-med: 16px;
 }
 
 *{
@@ -139,10 +135,14 @@ header{
 }
 
 .itens{
+    overflow: hidden;
+}
+
+.nav-track{
     display: flex;
     gap: 5px;
-    overflow: hidden;
-    width: 100%
+    width: 100%;
+    transition: transform 0.5s ease;
 }
 
 .item-navegacao{
@@ -286,7 +286,7 @@ header{
     }
 }
 
-@media screen and (min-width: 1274px){
+@media screen and (min-width: 1390px){
     .item-navegacao{
         flex: 0 0 25%;
     }
