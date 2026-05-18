@@ -47,6 +47,22 @@ header{
     background-color: var(--escuro-principal);
 }
 
+#menu-hamburguer{
+    width: 27px;
+    color: var(--claro-principal);
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.home{
+    max-width: 100px;
+}
+
+.home img{
+    width: 45px;
+    border-radius: 50%;
+}
+
 .navegacao-principal{
     display: flex;
     flex-flow: column;
@@ -75,20 +91,8 @@ header{
     text-decoration: underline;
 }
 
-#menu-hamburguer{
-    width: 27px;
-    color: var(--claro-principal);
-    font-size: 1.4em;
-    cursor: pointer;
-}
-
-.home{
-    max-width: 100px;
-}
-
-.home img{
-    width: 45px;
-    border-radius: 50%;
+.navegacao-principal a.selected{
+    text-decoration: underline;
 }
 
 .calad__apresentacao{
@@ -97,7 +101,7 @@ header{
     justify-content: center;
     gap: var(--espaco-gra);
 
-    height: 690px;
+    height: 550px;
     padding-left: 15px;
 
     color: var(--claro-principal);
@@ -218,8 +222,8 @@ header{
 }
 
 .artigo__conteudo{
-    margin-inline: 20px;
     margin-block: 40px;
+    margin-inline: 20px;
 }
 
 .artigo__conteudo h3{
@@ -263,9 +267,25 @@ header{
     transition: color 0.2s;
 }
 
+.artigo__midia{
+    margin-block: 40px;
+    margin-inline: 20px;
+}
+
 .artigo__imagem{
     width: 100%;
     max-width: 880px;
+}
+
+.artigo__imagem-descricao{
+    color: #686d7e;
+    line-height: 20px;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.artigo__imagem-descricao > span{
+    color: var(--escuro-principal);
 }
 
 /* === ESTADOS === */
@@ -277,6 +297,37 @@ header{
 @media screen and (min-width: 800px){
     .item-navegacao{
         flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navegacao-principal{
+        display: flex;
+        flex-flow: row;
+        gap: 30px;
+
+        position: static;
+        width: auto;
+        padding: 5px;
+        padding-right: 20px;
+    }
+
+    #menu-hamburguer{
+        display: none;
+    }
+
+    .artigos{
+        padding-block: 20px;
+    }
+
+    .artigo{
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 }
 
