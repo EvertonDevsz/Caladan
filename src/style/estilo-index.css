@@ -120,6 +120,7 @@ header{
 }
 
 .calad__navegacao{
+    position: relative;
     color: var(--claro-principal);
     padding-block: 40px;
     padding-inline: var(--espaco-med);
@@ -133,15 +134,21 @@ header{
 }
 
 .navegacao-da-secao{
-    display: flex;
-    justify-content: space-between;
     padding: 20px;
-    padding-bottom: 0;
+    padding-bottom: 0
+}
+
+.itens{
+    display: flex;
+    gap: 5px;
+    overflow: hidden;
+    width: 100%
 }
 
 .item-navegacao{
     display: grid;
-    grid-template-columns: 155px 200px;
+    flex: 0 0 100%;
+    grid-template-columns: 155px 170px;
     grid-template-rows: 1fr 5fr;
 }
 
@@ -168,6 +175,7 @@ header{
 }
 
 .item-navegacao__descricao{
+    width: 170px;
     margin-top: 5px;
     color: var(--claro-secundario);
     font-size: 1.1em;
@@ -176,6 +184,10 @@ header{
 }
 
 .botao-de-proximo{
+    position: absolute;
+    right: 5px;
+    top: 112px;
+
     height: 40px;
     width: 40px;
     border: 1px solid rgb(104, 104, 104);
@@ -255,7 +267,31 @@ header{
     width: 100%;
     max-width: 880px;
 }
+
 /* === ESTADOS === */
 .escondido{
     display: none;
+}
+
+/* === MEDIA QUERIES === */
+@media screen and (min-width: 800px){
+    .item-navegacao{
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 1190px){
+    .item-navegacao{
+        flex: 0 0 33%;
+    }
+}
+
+@media screen and (min-width: 1274px){
+    .item-navegacao{
+        flex: 0 0 25%;
+    }
+
+    .botao-de-proximo{
+        display: none;
+    }
 }
