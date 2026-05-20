@@ -11,87 +11,93 @@
 </head>
 <body>
     <header>
-        <span id="menu-hamburguer"><i class="fa-solid fa-bars"></i></span>
-
-        <a href="#" class="home"><img src="src/assets/images/star-symbol.jfif" alt="Home"></a>
-
-        <nav class="navegacao-principal escondido" aria-label="Navegação Principal">
-            <a class="selected" href="#">Mundo</a>
-            <a href="#">Personagens</a>
-            <a href="#">Raças</a>
-        </nav>
+        <div class="header-conteudo">
+            <span id="menu-hamburguer"><i class="fa-solid fa-bars"></i></span>
+            <a href="#" class="home"><img src="src/assets/images/star-symbol.jfif" alt="Home"></a>
+            <nav class="navegacao-principal escondido" aria-label="Navegação Principal">
+                <a class="selected" href="#">Mundo</a>
+                <a href="#">Personagens</a>
+                <a href="#">Raças</a>
+            </nav>
+        </div>
     </header>
 
     <main class="calad">
-        <section class="calad__apresentacao">
-            <h1>Bem-vindo ao Calad</h1>
-            <p>Explore e conheça o mundo banhado pelo <strong>Negro Mar de Estrelas</strong>.</p>
-        </section>
-
-        <section class="calad__navegacao">
-            <h2>Navegue:</h2>
-            
-            <div class="navegacao-da-secao">
-                <nav class="itens" aria-label="Navegação da Seção">
-                    <div class="nav-track">
-                        <div class="item-navegacao">
-                            <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/exoplanetas.jfif" alt="Imagem de Exoplaneta"></a>
-
-                            <a class="item-navegacao__nome" href="#">Exoplanetas</a>
-                            <p class="item-navegacao__descricao">resumo do que seriam exoplanetas do universo de Cáladan</p>
-                        </div>
-
-                        <div class="item-navegacao ">
-                            <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/estrelas.jfif" alt="Imagem de Estrela"></a>
-
-                            <a class="item-navegacao__nome" href="#">Estrelas</a>
-                            <p class="item-navegacao__descricao">resumo do que seriam estrelas do universo de Cáladan</p>
-                        </div>
-
-                        <div class="item-navegacao ">
-                            <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/buracos-negros.jfif" alt="Imagem de Buraco Negro"></a>
-
-                            <a class="item-navegacao__nome" href="#">Buracos Negros</a>
-                            <p class="item-navegacao__descricao">resumo do que seriam buracos negros do universo de Cáladan</p>
-                        </div>
-
-                        <div class="item-navegacao ">
-                            <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/galaxias.jfif" alt="Imagem de Galáxia"></a>
-
-                            <a class="item-navegacao__nome" href="#">Galáxias</a>
-                            <p class="item-navegacao__descricao">resumo do que seriam galaxias do universo de Cáladan</p>
-                        </div>
-                    </div>
-                </nav>
-
-                <button class="botao-de-proximo" type="button"><i class="fa-solid fa-angle-right"></i></button>
+        <section class="calad__apresentacao-container">
+            <div class="calad__apresentacao">
+                <h1>Bem-vindo ao Calad</h1>
+                <p>Explore e conheça o mundo banhado pelo <strong>Negro Mar de Estrelas</strong>.</p>
             </div>
         </section>
 
-        <section class="artigos">
-            <h2>Apresentando o Calad</h2>
+        <section class="calad__navegacao-container">
+            <div class="calad__navegacao">
+                <h2>Navegue:</h2>
+                
+                <div class="navegacao-da-secao">
+                    <nav class="itens" aria-label="Navegação da Seção">
+                        <div class="nav-track">
+                            <div class="item-navegacao">
+                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/exoplanetas.jfif" alt="Imagem de Exoplaneta"></a>
 
-            <article class="artigo">
-                <div class="artigo__conteudo">
-                    <h3>Origem do nome</h3>
-                    <p>
-                        O nome tem origem nos primórdios da sociedade interplanetária, com os primeiros registros de seu uso sendo ainda na <a href="#">Era de Bronze</a>. Era usado inicialmente como referência ao meio pelo qual se navegava — ou seja, o espaço — significando algo como "Negro Mar de Estrelas", porém a popularização desse termo ao longo das gerações, especialmente nas áreas a noroeste de <a href="#">Zuetim</a>, juntamente com a fácil sonoridade, acabou por transformar Calad de um substantivo comum ao nome do próprio universo.
-                    </p>
+                                <a class="item-navegacao__nome" href="#">Exoplanetas</a>
+                                <p class="item-navegacao__descricao">resumo do que seriam exoplanetas do universo de Cáladan</p>
+                            </div>
 
-                    <a class="veja-mais" href="#" target="_blank">
-                        Veja mais <i class="link-icone fa-solid fa-circle-right"></i>
-                    </a>
+                            <div class="item-navegacao ">
+                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/estrelas.jfif" alt="Imagem de Estrela"></a>
+
+                                <a class="item-navegacao__nome" href="#">Estrelas</a>
+                                <p class="item-navegacao__descricao">resumo do que seriam estrelas do universo de Cáladan</p>
+                            </div>
+
+                            <div class="item-navegacao ">
+                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/buracos-negros.jfif" alt="Imagem de Buraco Negro"></a>
+
+                                <a class="item-navegacao__nome" href="#">Buracos Negros</a>
+                                <p class="item-navegacao__descricao">resumo do que seriam buracos negros do universo de Cáladan</p>
+                            </div>
+
+                            <div class="item-navegacao ">
+                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/galaxias.jfif" alt="Imagem de Galáxia"></a>
+
+                                <a class="item-navegacao__nome" href="#">Galáxias</a>
+                                <p class="item-navegacao__descricao">resumo do que seriam galaxias do universo de Cáladan</p>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <button class="botao-de-proximo" type="button"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
+            </div>
+        </section>
 
-                <div class="artigo__midia">
-                    <img class="artigo__imagem" src="src/assets/images/mapa.jpg" alt="imagem">
+        <section class="artigos-container">
+            <div class="artigos">
+                <h2>Apresentando o Calad</h2>
 
-                    <p class="artigo__imagem-descricao">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem inventore fuga explicabo laboriosam quasi ad veritatis odit facere quisquam expedita animi, magnam aut quo, tenetur nam in voluptatibus aperiam laborum? <br>
-                        <span>Keith Miller, Caltech/IPAC — SELab</span>
-                    </p>
-                </div>
-            </article>
+                <article class="artigo">
+                    <div class="artigo__conteudo">
+                        <h3>Origem do nome</h3>
+                        <p>
+                            O nome tem origem nos primórdios da sociedade interplanetária, com os primeiros registros de seu uso sendo ainda na <a href="#">Era de Bronze</a>. Era usado inicialmente como referência ao meio pelo qual se navegava — ou seja, o espaço — significando algo como "Negro Mar de Estrelas", porém a popularização desse termo ao longo das gerações, especialmente nas áreas a noroeste de <a href="#">Zuetim</a>, juntamente com a fácil sonoridade, acabou por transformar Calad de um substantivo comum ao nome do próprio universo.
+                        </p>
+
+                        <a class="veja-mais" href="#" target="_blank">
+                            Veja mais <i class="link-icone fa-solid fa-circle-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="artigo__midia">
+                        <img class="artigo__imagem" src="src/assets/images/mapa.jpg" alt="imagem">
+
+                        <p class="artigo__imagem-descricao">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem inventore fuga explicabo laboriosam quasi ad veritatis odit facere quisquam expedita animi, magnam aut quo, tenetur nam in voluptatibus aperiam laborum? <br>
+                            <span>Keith Miller, Caltech/IPAC — SELab</span>
+                        </p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 </body>

@@ -36,15 +36,23 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--claro-principal);
 }
 
 header{
+    background-color: var(--escuro-principal);
+}
+
+.header-conteudo{
     display: grid;
     position: relative;
     align-items: center;
     grid-template-columns: 6fr 7fr;
+
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
     padding: 18px;
-    background-color: var(--escuro-principal);
 }
 
 #menu-hamburguer{
@@ -67,14 +75,14 @@ header{
     display: flex;
     flex-flow: column;
     position: absolute;
-    top: 70px;
+    inset-inline: 0;
+    top: 65px;
     z-index: 10;
 
     max-height: 680px;
-    width: 100%;
-
-    
-    padding: var(--espaco-gra);
+    margin-inline: -18px;
+    padding: 25px;
+    padding-left: 40px;
     padding-top: 45px;
 
     background-color: var(--escuro-principal);
@@ -87,12 +95,16 @@ header{
     text-decoration: none;
 }
 
+.navegacao-principal a.selected{
+    text-decoration: underline;
+}
+
 .navegacao-principal a:hover{
     text-decoration: underline;
 }
 
-.navegacao-principal a.selected{
-    text-decoration: underline;
+.calad__apresentacao-container{
+    background: url(../assets/images/fundo-calad.jfif) center / auto;
 }
 
 .calad__apresentacao{
@@ -102,10 +114,11 @@ header{
     gap: var(--espaco-gra);
 
     height: 550px;
+    max-width: 1500px;
+    margin: auto;
     padding-left: 15px;
 
     color: var(--claro-principal);
-    background: url(../assets/images/fundo-calad.jfif) center / auto;
 }
 
 .calad__apresentacao > h1{
@@ -119,12 +132,22 @@ header{
     font-family: monospace;
 }
 
+.calad__navegacao-container{
+    background-color: var(--escuro-secundario);
+}
+
 .calad__navegacao{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     position: relative;
-    color: var(--claro-principal);
+
+    max-width: 1700px;
+    margin: auto;
     padding-block: 40px;
     padding-inline: var(--espaco-med);
-    background-color: var(--escuro-secundario);
+
+    color: var(--claro-principal);
 }
 
 .calad__navegacao > h2{
@@ -151,9 +174,9 @@ header{
 
 .item-navegacao{
     display: grid;
-    flex: 0 0 100%;
     grid-template-columns: 155px 170px;
     grid-template-rows: 1fr 5fr;
+    flex: 0 0 100%;
 }
 
 .item-navegacao__imagem{
@@ -172,19 +195,15 @@ header{
 
 .item-navegacao__nome{
     color: var(--claro-principal);
-    font-size: var(--fonte-med);
-    font-weight: bold;
+    font: bold 18px monospace;
     text-decoration: none;
-    font-family: monospace;
 }
 
 .item-navegacao__descricao{
     width: 170px;
     margin-top: 5px;
     color: var(--claro-secundario);
-    font-size: 1.1em;
-    line-height: 18px;
-    font-family: monospace;
+    font: 1.1em / 18px monospace;
 }
 
 .botao-de-proximo{
@@ -207,9 +226,13 @@ header{
     border: 1px solid var(--claro-principal);
 }
 
-.artigos{
+.artigos-container{
     padding-block: 50px;
-    background-color: var(--claro-principal);
+}
+
+.artigos{
+    max-width: 1500px;
+    margin: auto;
 }
 
 .artigos h2{
@@ -229,15 +252,13 @@ header{
 .artigo__conteudo h3{
     margin-bottom: 40px;
     color: var(--escuro-secundario);
-    font-size: var(--fonte-xgra);
+    font-size: 46px;
     line-height: 40px;
 }
 
 .artigo__conteudo p{
     margin-bottom: 20px;
-    line-height: 25px;
-    font-family: monospace;
-    font-size: 1.2em;
+    font: 1.2em / 25px monospace;
     text-indent: 15px;
 }
 
@@ -252,8 +273,8 @@ header{
 
 .artigo__conteudo .veja-mais{
     color: var(--escuro-principal);
-    font-size: var(--fonte-gra);
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: bold; 
     text-decoration: none;
 }
 
@@ -262,14 +283,14 @@ header{
 }
 
 .link-icone{
-    font-size: var(--fonte-med);
     color: var(--especial);
+    font-size: 18px;
     transition: color 0.2s;
 }
 
 .artigo__midia{
-    margin: auto;
     max-width: 850px;
+    margin: auto;
 }
 
 .artigo__imagem{
@@ -300,7 +321,7 @@ header{
 }
 
 @media screen and (min-width: 1024px){
-    header{
+    .header-conteudo{
         display: flex;
         justify-content: space-between;
     }
@@ -309,8 +330,8 @@ header{
         display: flex;
         flex-flow: row;
         gap: 30px;
-
         position: static;
+
         width: auto;
         padding: 5px;
         padding-right: 20px;
@@ -320,7 +341,7 @@ header{
         display: none;
     }
 
-    .artigos{
+    .artigos-container{
         padding-block: 20px;
     }
 
@@ -330,8 +351,8 @@ header{
     }
 
     .artigo__midia{
-    margin-block: 40px;
-    margin-inline: 20px;
+        margin-block: 40px;
+        margin-inline: 20px;
     }
 }
 
