@@ -268,13 +268,12 @@ header{
 }
 
 .artigo__midia{
-    margin-block: 40px;
-    margin-inline: 20px;
+    margin: auto;
+    max-width: 850px;
 }
 
 .artigo__imagem{
     width: 100%;
-    max-width: 880px;
 }
 
 .artigo__imagem-descricao{
@@ -328,6 +327,11 @@ header{
     .artigo{
         display: grid;
         grid-template-columns: 50% 50%;
+    }
+
+    .artigo__midia{
+    margin-block: 40px;
+    margin-inline: 20px;
     }
 }
 
