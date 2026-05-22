@@ -308,12 +308,53 @@ header{
     color: var(--escuro-principal);
 }
 
+.rodape{
+    background-color: var(--escuro-principal);
+    color: var(--claro-principal);
+}
+
+.rodape__conteudo{
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 18px;
+}
+
+.caladan-logo{
+    width: 45px;
+    border-radius: 50%;
+}
+
+.rodape__navegacao{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.rodape__adicionais{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
 /* === ESTADOS === */
 .escondido{
     display: none;
 }
 
 /* === MEDIA QUERIES === */
+@media screen and (min-width: 640px){
+    .rodape__conteudo{
+        display: grid;
+        grid-template-rows: 350px 200px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+}
+
 @media screen and (min-width: 800px){
     .item-navegacao{
         flex: 0 0 50%;
@@ -353,6 +394,16 @@ header{
     .artigo__midia{
         margin-block: 40px;
         margin-inline: 20px;
+    }
+
+    .rodape__conteudo{
+        display: grid;
+        grid-template-columns: 4fr 4fr 2fr;
+    }
+
+    .rodape__adicionais{
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 1/-1;
     }
 }
 
