@@ -2,17 +2,17 @@
 let currentNavIndex = 0
 
 // ==================== DOM ==================== //
-const mainNav = document.querySelector(".navegacao-principal")
-const navContainer = document.querySelector(".itens")
-const navTrack = navContainer.querySelector(".nav-track")
-const navItems = navTrack.querySelectorAll(".item-navegacao")
+const headerNav = document.querySelector(".header__nav")
+const exploreNav = document.querySelector(".explore__nav")
+const navTrack = exploreNav.querySelector(".card-list")
+const navCards = navTrack.querySelectorAll(".card")
 
 // ==================== HELPERS ==================== //
 // ==================== RENDER ==================== //
 function modifyNavigation(){
-    const itemWidth = navItems[0].offsetWidth
-    const visibleItems = Math.round(navContainer.offsetWidth / itemWidth)
-    const maxIndex = navItems.length - visibleItems
+    const itemWidth = navCards[0].offsetWidth
+    const visibleItems = Math.round(exploreNav.offsetWidth / itemWidth)
+    const maxIndex = navCards.length - visibleItems
 
     currentNavIndex++
 
@@ -23,12 +23,12 @@ function modifyNavigation(){
     navTrack.style.transform = `translateX(-${currentNavIndex * itemWidth}px)`
 }
 // ==================== EVENTS ==================== //
-const burgerMenu = document.querySelector("#menu-hamburguer")
+const burgerMenu = document.querySelector(".header__menu-toggle")
 burgerMenu.addEventListener("click", () => {
-    mainNav.classList.toggle("escondido")
+    headerNav.classList.toggle("header__nav--hidden")
 })
 
-const nextButton = document.querySelector(".botao-de-proximo")
+const nextButton = document.querySelector(".explore__button")
 nextButton.addEventListener("click", modifyNavigation)
 window.addEventListener("resize", modifyNavigation)
 

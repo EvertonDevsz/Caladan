@@ -10,90 +10,90 @@
     <script src="src/javascript/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-conteudo">
-            <button id="menu-hamburguer" type="button"><i class="fa-solid fa-bars"></i></button>
+    <header class="header">
+        <div class="header__wrapper">
+            <button class="header__menu-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
 
-            <a href="#" class="logo"><img src="src/assets/images/star-symbol.jfif" alt="Home"></a>
+            <a href="#" class="header__logo"><img src="src/assets/images/star-symbol.jfif" alt="Home"></a>
 
-            <nav class="navegacao-principal hidden" aria-label="Navegação Principal">
-                <a class="selected" href="#">Mundo</a>
-                <a href="#">Personagens</a>
-                <a href="#">Raças</a>
+            <nav class="header__nav header__nav--hidden" aria-label="Navegação Principal">
+                <a class="nav__link nav__link--selected" href="#">Mundo</a>
+                <a class="nav__link" href="#">Personagens</a>
+                <a class="nav__link" href="#">Raças</a>
             </nav>
         </div>
     </header>
 
-    <main class="calad">
-        <section class="calad__apresentacao-container">
-            <div class="calad__apresentacao">
-                <h1>Bem-vindo ao Calad</h1>
-                <p>Explore e conheça o mundo banhado pelo <strong>Negro Mar de Estrelas</strong>.</p>
+    <main>
+        <section class="hero">
+            <div class="hero__wrapper">
+                <h1 class="hero__title">Bem-vindo ao Calad</h1>
+                <p class="hero__subtitle">Explore e conheça o mundo banhado pelo <strong>Negro Mar de Estrelas</strong>.</p>
             </div>
         </section>
 
-        <section class="calad__navegacao-container">
-            <div class="calad__navegacao">
-                <h2>Navegue:</h2>
+        <section class="explore">
+            <div class="explore__wrapper">
+                <h2 class="explore__title">Navegue:</h2>
                 
-                <div class="navegacao-da-secao">
-                    <nav class="itens" aria-label="Navegação da Seção">
-                        <ul class="nav-track">
-                            <li class="item-navegacao">
-                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/exoplanetas.jfif" alt="Imagem de Exoplaneta"></a>
+                <div class="explore__carousel">
+                    <nav class="explore__nav" aria-label="Navegação da Seção">
+                        <ul class="card-list">
+                            <li class="card">
+                                <a class="card__image-link" href="#"><img src="src/assets/images/exoplanetas.jfif" alt="Imagem de Exoplaneta"></a>
 
-                                <a class="item-navegacao__nome" href="#">Exoplanetas</a>
-                                <p class="item-navegacao__descricao">resumo do que seriam exoplanetas do universo de Cáladan</p>
+                                <a class="card__title" href="#">Exoplanetas</a>
+                                <p class="card__description">resumo do que seriam exoplanetas do universo de Cáladan</p>
                             </li>
 
-                            <li class="item-navegacao ">
-                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/estrelas.jfif" alt="Imagem de Estrela"></a>
+                            <li class="card">
+                                <a class="card__image-link" href="#"><img src="src/assets/images/estrelas.jfif" alt="Imagem de Estrela"></a>
 
-                                <a class="item-navegacao__nome" href="#">Estrelas</a>
-                                <p class="item-navegacao__descricao">resumo do que seriam estrelas do universo de Cáladan</p>
+                                <a class="card__title" href="#">Estrelas</a>
+                                <p class="card__description">resumo do que seriam estrelas do universo de Cáladan</p>
                             </li>
 
-                            <li class="item-navegacao ">
-                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/buracos-negros.jfif" alt="Imagem de Buraco Negro"></a>
+                            <li class="card">
+                                <a class="card__image-link" href="#"><img src="src/assets/images/buracos-negros.jfif" alt="Imagem de Buraco Negro"></a>
 
-                                <a class="item-navegacao__nome" href="#">Buracos Negros</a>
-                                <p class="item-navegacao__descricao">resumo do que seriam buracos negros do universo de Cáladan</p>
+                                <a class="card__title" href="#">Buracos Negros</a>
+                                <p class="card__description">resumo do que seriam buracos negros do universo de Cáladan</p>
                             </li>
 
-                            <li class="item-navegacao ">
-                                <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/galaxias.jfif" alt="Imagem de Galáxia"></a>
+                            <li class="card">
+                                <a class="card__image-link" href="#"><img src="src/assets/images/galaxias.jfif" alt="Imagem de Galáxia"></a>
 
-                                <a class="item-navegacao__nome" href="#">Galáxias</a>
-                                <p class="item-navegacao__descricao">resumo do que seriam galaxias do universo de Cáladan</p>
+                                <a class="card__title" href="#">Galáxias</a>
+                                <p class="card__description">resumo do que seriam galaxias do universo de Cáladan</p>
                             </li>
                         </ul>
                     </nav>
 
-                    <button class="botao-de-proximo" type="button"><i class="fa-solid fa-angle-right"></i></button>
+                    <button class="explore__button" type="button"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
         </section>
 
-        <section class="artigos-container">
-            <div class="artigos">
-                <h2>Apresentando o Calad</h2>
+        <section class="articles">
+            <div class="articles__wrapper">
+                <h2 class="articles__title">Apresentando o Calad</h2>
 
-                <article class="artigo">
-                    <div class="artigo__conteudo">
-                        <h3>Origem do nome</h3>
+                <article class="article">
+                    <div class="article__body">
+                        <h3 class="article__title">Origem do nome</h3>
                         <p>
                             O nome tem origem nos primórdios da sociedade interplanetária, com os primeiros registros de seu uso sendo ainda na <a href="#">Era de Bronze</a>. Era usado inicialmente como referência ao meio pelo qual se navegava — ou seja, o espaço — significando algo como "Negro Mar de Estrelas", porém a popularização desse termo ao longo das gerações, especialmente nas áreas a noroeste de <a href="#">Zuetim</a>, juntamente com a fácil sonoridade, acabou por transformar Calad de um substantivo comum ao nome do próprio universo.
                         </p>
 
-                        <a class="link-externo" href="#" target="_blank">
-                            Veja mais <i class="link-icone fa-solid fa-circle-right"></i>
+                        <a class="external-link" href="#" target="_blank">
+                            Veja mais <i class="link-icon fa-solid fa-circle-right"></i>
                         </a>
                     </div>
 
-                    <div class="artigo__midia">
-                        <img class="artigo__imagem" src="src/assets/images/mapa.jpg" alt="imagem">
+                    <div class="article__media">
+                        <img class="article__image" src="src/assets/images/mapa.jpg" alt="imagem">
 
-                        <p class="artigo__imagem-descricao">
+                        <p class="article__caption">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem inventore fuga explicabo laboriosam quasi ad veritatis odit facere quisquam expedita animi, magnam aut quo, tenetur nam in voluptatibus aperiam laborum? <br>
                             <span>Keith Miller, Caltech/IPAC — SELab</span>
                         </p>
@@ -103,19 +103,19 @@
         </section>
     </main>
 
-    <footer class="rodape">
-        <div class="rodape__conteudo">
-            <div class="rodape__descricao">
-                <img class="caladan-logo" src="src/assets/images/star-symbol.jfif" alt="Logo de Cáladan">
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__brand">
+                <img class="footer__logo" src="src/assets/images/star-symbol.jfif" alt="Logo de Cáladan">
 
-                <h4>Universo de Cáladan</h4>
-                <p>NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.a</p>
+                <strong>Universo de Cáladan</strong> <!-- MUDAR PARA STRONG -->
+                <p>NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.</p>
 
                 <a href="#">About NASA's Mission</a>
-                <a class="link-externo" href="">Join Us <i class="link-icone fa-solid fa-circle-right"></i></a>
+                <a class="external-link" href="">Join Us <i class="link-icon fa-solid fa-circle-right"></i></a>
             </div>
 
-            <nav class="rodape__navegacao">
+            <nav class="footer__nav" aria-label="Links do site">
                 <a href="">Home</a>
                 <a href="">News & Events</a>
                 <a href="">Multimedia</a>
@@ -134,25 +134,25 @@
                 <a href="">NASA en Español</a>
             </nav>
 
-            <div class="creditos">
-                <h4>Criador do Site: <strong>Everton R. da Paixão</strong></h4>
+            <div class="footer__credits">
+                <p class="credit">Criador do Site: <strong>Everton R. da Paixão</strong></p>
 
-                <span>Siga nas Redes</span>
-                <ul class="redes-sociais"> 
+                <p><span>Siga nas Redes</span></p>
+                <ul class="social-media"> 
                     <li>
-                        <a class="link" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                     </li>
 
                     <li>
-                        <a class="link" href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
                     </li>
 
                     <li>
-                        <a class="link" href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
                     </li>
 
                     <li>
-                        <a class="link" href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
                     </li>
                 </ul>
 
@@ -160,7 +160,7 @@
                 <a href="">NASA Newsletters</a>
             </div>
 
-            <nav class="rodape__adicionais">
+            <nav class="footer__nav-legal" aria-label="Links institucionais">
                 <a href="">Sitemap</a>
                 <a href="">Office of the IG</a>
                 <a href="">For Media</a>

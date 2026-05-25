@@ -43,7 +43,7 @@ header{
     background-color: var(--escuro-principal);
 }
 
-.header-conteudo{
+.header__wrapper{
     display: grid;
     position: relative;
     align-items: center;
@@ -55,23 +55,25 @@ header{
     padding: 18px;
 }
 
-#menu-hamburguer{
-    width: 27px;    
+.header__menu-toggle{
+    width: 27px;
+    border: none;
     color: var(--claro-principal);
     font-size: 1.4em;
+    background-color: var(--escuro-principal);
     cursor: pointer;
 }
 
-.home{
+.header__logo{
     max-width: 100px;
 }
 
-.home img{
+.header__logo img{
     width: 45px;
     border-radius: 50%;
 }
 
-.navegacao-principal{
+.header__nav{
     display: flex;
     flex-flow: column;
     position: absolute;
@@ -80,7 +82,6 @@ header{
     z-index: 10;
 
     max-height: 680px;
-    margin-inline: -18px;
     padding: 25px;
     padding-left: 40px;
     padding-top: 45px;
@@ -89,25 +90,29 @@ header{
     overflow-y: auto;
 }
 
-.navegacao-principal a{
+.header__nav--hidden{
+    display: none;
+}
+
+.header__nav a{
     margin-block: var(--espaco-med);
     color: var(--claro-principal);
     text-decoration: none;
 }
 
-.navegacao-principal a.selected{
+.header__nav a.nav__link--selected{
     text-decoration: underline;
 }
 
-.navegacao-principal a:hover{
+.header__nav a:hover{
     text-decoration: underline;
 }
 
-.calad__apresentacao-container{
+.hero{
     background: url(../assets/images/fundo-calad.jfif) center / auto;
 }
 
-.calad__apresentacao{
+.hero__wrapper{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -121,22 +126,22 @@ header{
     color: var(--claro-principal);
 }
 
-.calad__apresentacao > h1{
+.hero__title{
     font-size: 5em;
 }
 
-.calad__apresentacao > p{
+.hero__subtitle{
     padding-left: 3px;
     color: var(--claro-secundario);
     font-size: var(--fonte-med);
     font-family: monospace;
 }
 
-.calad__navegacao-container{
+.explore{
     background-color: var(--escuro-secundario);
 }
 
-.calad__navegacao{
+.explore__wrapper{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -150,40 +155,41 @@ header{
     color: var(--claro-principal);
 }
 
-.calad__navegacao > h2{
+.explore__title{
     font-family: var(--fonte-h2);
     font-size: var(--fonte-med);
     font-weight: normal;
 }
 
-.navegacao-da-secao{
+.explore__carousel{
     padding: 20px;
     padding-bottom: 0
 }
 
-.itens{
+.explore__nav{
     overflow: hidden;
 }
 
-.nav-track{
+.card-list{
     display: flex;
     gap: 5px;
     width: 100%;
+    list-style: none;
     transition: transform 0.5s ease;
 }
 
-.item-navegacao{
+.card{
     display: grid;
     grid-template-columns: 155px 170px;
     grid-template-rows: 1fr 5fr;
     flex: 0 0 100%;
 }
 
-.item-navegacao__imagem{
+.card__image-link{
     grid-row: 1/3;
 }
 
-.item-navegacao__imagem img{
+.card__image-link > img{
     width: 130px;
     border-radius: 50%;
 
@@ -193,20 +199,20 @@ header{
     overflow: hidden;
 }
 
-.item-navegacao__nome{
+.card__title{
     color: var(--claro-principal);
     font: bold 18px monospace;
     text-decoration: none;
 }
 
-.item-navegacao__descricao{
+.card__description{
     width: 170px;
     margin-top: 5px;
     color: var(--claro-secundario);
     font: 1.1em / 18px monospace;
 }
 
-.botao-de-proximo{
+.explore__button{
     position: absolute;
     right: 5px;
     top: 112px;
@@ -222,20 +228,20 @@ header{
     transition: border 0.2s;
 }
 
-.botao-de-proximo:hover{
+.explore__button:hover{
     border: 1px solid var(--claro-principal);
 }
 
-.artigos-container{
+.articles{
     padding-block: 50px;
 }
 
-.artigos{
+.articles__wrapper{
     max-width: 1500px;
     margin: auto;
 }
 
-.artigos h2{
+.articles__title{
     margin-top: 45px;
     padding-inline:var(--espaco-med) ;
 
@@ -244,87 +250,87 @@ header{
     font-weight: normal;
 }
 
-.artigo__conteudo{
+.article__body{
     margin-block: 40px;
     margin-inline: 20px;
 }
 
-.artigo__conteudo h3{
+.article__title{
     margin-bottom: 40px;
     color: var(--escuro-secundario);
     font-size: 46px;
     line-height: 40px;
 }
 
-.artigo__conteudo p{
+.article__body p{
     margin-bottom: 20px;
     font: 1.2em / 25px monospace;
     text-indent: 15px;
 }
 
-.artigo__conteudo p > a{
+.article__body p > a{
     color: var(--especial);
     font-weight: bold;
 }
 
-.artigo__conteudo p > a:hover{
+.article__body p > a:hover{
     color: #ca1130;
 }
 
-.link-externo{
+.external-link{
     color: var(--escuro-principal);
     font-size: 24px;
     font-weight: bold; 
     text-decoration: none;
 }
 
-.link-externo:hover .link-icone{
+.external-link:hover .link-icon{
     color: #ca1130;
 }
 
-.link-icone{
+.link-icon{
     color: var(--especial);
     font-size: 18px;
     transition: color 0.2s;
 }
 
-.artigo__midia{
+.article__media{
     max-width: 850px;
     margin: auto;
 }
 
-.artigo__imagem{
+.article__image{
     width: 100%;
 }
 
-.artigo__imagem-descricao{
+.article__caption{
     color: #686d7e;
     line-height: 20px;
     font-size: 0.8em;
     text-align: justify;
 }
 
-.artigo__imagem-descricao > span{
+.article__caption > span{
     color: var(--escuro-principal);
 }
 
-.rodape{
+.footer{
     color: var(--claro-principal);
     background-color: var(--escuro-principal);
     padding: 20px;
 }
 
-.rodape a{
+.footer a{
     color: var(--claro-principal);
     font-size: 0.9em;
     text-decoration: none;
 }
 
-.rodape a:hover{
+.footer a:hover{
     text-decoration: underline;
 }
 
-.rodape__conteudo{
+.footer__wrapper{
     display: flex;
     flex-flow: column;
     gap: 40px;
@@ -335,52 +341,52 @@ header{
     margin-top: 45px;
 }
 
-.rodape__descricao{
+.footer__brand{
     display: flex;
     flex-flow: column;
     gap: 20px;
     width: 90%;
 }
 
-.rodape__descricao p{
+.footer__brand p{
     color: var(--claro-secundario);
     line-height: 1.5em;
     font-size: 0.9em;
 }
 
-.caladan-logo{
+.footer__logo{
     width: 45px;
     border-radius: 50%;
 }
 
-.rodape__navegacao{
+.footer__nav{
     display: flex;
     flex-flow: column wrap;
     gap: 20px;
 }
 
-.creditos{
+.footer__credits{
     display: flex;
     flex-flow: column;
     gap: 15px;
 }
 
-.creditos strong{
+.credit strong{
     color: var(--claro-secundario);
     font-size: 0.9em;
     font-style: italic;
 }
 
-.creditos span{
+.footer__credits p > span{
     color: var(--claro-secundario);
     font-weight: bold;
 }
 
-.redes-sociais{
+.social-media{
     list-style: none;
 }
 
-.redes-sociais li{
+.social-media li{
     display: inline-block;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -393,11 +399,11 @@ header{
     transition: background-color 0.2s;
 }
 
-.redes-sociais li:hover{
+.social-media li:hover{
     background-color: var(--claro-secundario);
 }
 
-.rodape__adicionais{
+.footer__nav-legal{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-content: start;
@@ -407,54 +413,49 @@ header{
     padding-top: 25px;
 }
 
-.rodape__adicionais a{
+.footer__nav-legal a{
     color: var(--claro-secundario);
-}
-
-/* === ESTADOS === */
-.escondido{
-    display: none;
 }
 
 /* === MEDIA QUERIES === */
 @media screen and (min-width: 640px){
-    .rodape__conteudo{
+    .footer__wrapper{
         display: grid;
         grid-template-rows: 290px 200px;
         grid-template-columns: repeat(6, 1fr);
         gap: 15px;
     }
 
-    .rodape__descricao{
+    .footer__brand{
         grid-column: 1/4;
     }
 
-    .rodape__navegacao{
+    .footer__nav{
         grid-column: 4/-1;
     }
 
-    .creditos{
+    .footer__credits{
         grid-column: 1/3;
     }
 
-    .rodape__adicionais{
+    .footer__nav-legal{
         grid-column: 3/-1;
     }
 }
 
 @media screen and (min-width: 800px){
-    .item-navegacao{
+    .card{
         flex: 0 0 50%;
     }
 }
 
 @media screen and (min-width: 1024px){
-    .header-conteudo{
+    .header-wrapper{
         display: flex;
         justify-content: space-between;
     }
 
-    .navegacao-principal{
+    .header__nav{
         display: flex;
         flex-flow: row;
         gap: 30px;
@@ -465,62 +466,62 @@ header{
         padding-right: 20px;
     }
 
-    #menu-hamburguer{
+    .header__menu-toggle{
         display: none;
     }
 
-    .artigos-container{
+    .articles{
         padding-block: 20px;
     }
 
-    .artigo{
+    .article{
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
-    .artigo__midia{
+    .article__media{
         margin-block: 40px;
         margin-inline: 20px;
     }
 
-    .rodape__conteudo{
+    .footer__wrapper{
         grid-template-rows: 290px 130px;
     }
 
-    .rodape__descricao{
+    .footer__brand{
         grid-column: 1/3;
     }
 
-    .rodape__navegacao{
+    .footer__nav{
         grid-column: 3/5;
     }
 
-    .creditos{
+    .footer__credits{
         grid-column: 5/-1;
     }
 
-    .rodape__adicionais{
+    .footer__nav-legal{
         grid-template-columns: repeat(3, 1fr);
         grid-column: 1/-1;
     }
 }
 
 @media screen and (min-width: 1190px){
-    .item-navegacao{
+    .card{
         flex: 0 0 33%;
     }
 }
 
 @media screen and (min-width: 1390px){
-    .item-navegacao{
+    .card{
         flex: 0 0 25%;
     }
 
-    .botao-de-proximo{
+    .explore__button{
         display: none;
     }
 
-    .rodape__adicionais{
+    .footer__nav-legal{
         display: flex;
         align-items: start;
         max-height: 100px;
