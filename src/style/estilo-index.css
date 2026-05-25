@@ -56,7 +56,7 @@ header{
 }
 
 #menu-hamburguer{
-    width: 27px;
+    width: 27px;    
     color: var(--claro-principal);
     font-size: 1.4em;
     cursor: pointer;
@@ -339,6 +339,7 @@ header{
     display: flex;
     flex-flow: column;
     gap: 20px;
+    width: 90%;
 }
 
 .rodape__descricao p{
@@ -389,6 +390,7 @@ header{
     font-size: 1.2em;
     background-color: var(--escuro-secundario);
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .redes-sociais li:hover{
