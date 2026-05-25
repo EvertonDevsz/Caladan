@@ -421,7 +421,7 @@ header{
 @media screen and (min-width: 640px){
     .footer__wrapper{
         display: grid;
-        grid-template-rows: 290px 200px;
+        grid-template-rows: 290px 250px;
         grid-template-columns: repeat(6, 1fr);
         gap: 15px;
     }
@@ -450,7 +450,7 @@ header{
 }
 
 @media screen and (min-width: 1024px){
-    .header-wrapper{
+    .header__wrapper{
         display: flex;
         justify-content: space-between;
     }
@@ -519,6 +519,10 @@ header{
 
     .explore__button{
         display: none;
+    }
+
+    .footer__wrapper{
+        grid-template-rows: 290px 100px;
     }
 
     .footer__nav-legal{
