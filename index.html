@@ -12,9 +12,11 @@
 <body>
     <header>
         <div class="header-conteudo">
-            <span id="menu-hamburguer"><i class="fa-solid fa-bars"></i></span>
-            <a href="#" class="home"><img src="src/assets/images/star-symbol.jfif" alt="Home"></a>
-            <nav class="navegacao-principal escondido" aria-label="Navegação Principal">
+            <button id="menu-hamburguer" type="button"><i class="fa-solid fa-bars"></i></button>
+
+            <a href="#" class="logo"><img src="src/assets/images/star-symbol.jfif" alt="Home"></a>
+
+            <nav class="navegacao-principal hidden" aria-label="Navegação Principal">
                 <a class="selected" href="#">Mundo</a>
                 <a href="#">Personagens</a>
                 <a href="#">Raças</a>
@@ -36,35 +38,35 @@
                 
                 <div class="navegacao-da-secao">
                     <nav class="itens" aria-label="Navegação da Seção">
-                        <div class="nav-track">
-                            <div class="item-navegacao">
+                        <ul class="nav-track">
+                            <li class="item-navegacao">
                                 <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/exoplanetas.jfif" alt="Imagem de Exoplaneta"></a>
 
                                 <a class="item-navegacao__nome" href="#">Exoplanetas</a>
                                 <p class="item-navegacao__descricao">resumo do que seriam exoplanetas do universo de Cáladan</p>
-                            </div>
+                            </li>
 
-                            <div class="item-navegacao ">
+                            <li class="item-navegacao ">
                                 <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/estrelas.jfif" alt="Imagem de Estrela"></a>
 
                                 <a class="item-navegacao__nome" href="#">Estrelas</a>
                                 <p class="item-navegacao__descricao">resumo do que seriam estrelas do universo de Cáladan</p>
-                            </div>
+                            </li>
 
-                            <div class="item-navegacao ">
+                            <li class="item-navegacao ">
                                 <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/buracos-negros.jfif" alt="Imagem de Buraco Negro"></a>
 
                                 <a class="item-navegacao__nome" href="#">Buracos Negros</a>
                                 <p class="item-navegacao__descricao">resumo do que seriam buracos negros do universo de Cáladan</p>
-                            </div>
+                            </li>
 
-                            <div class="item-navegacao ">
+                            <li class="item-navegacao ">
                                 <a class="item-navegacao__imagem" href="#"><img src="src/assets/images/galaxias.jfif" alt="Imagem de Galáxia"></a>
 
                                 <a class="item-navegacao__nome" href="#">Galáxias</a>
                                 <p class="item-navegacao__descricao">resumo do que seriam galaxias do universo de Cáladan</p>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </nav>
 
                     <button class="botao-de-proximo" type="button"><i class="fa-solid fa-angle-right"></i></button>
@@ -102,18 +104,18 @@
     </main>
 
     <footer class="rodape">
-        <nav class="rodape__conteudo">
-            <section class="rodape__descricao">
+        <div class="rodape__conteudo">
+            <div class="rodape__descricao">
                 <img class="caladan-logo" src="src/assets/images/star-symbol.jfif" alt="Logo de Cáladan">
 
                 <h4>Universo de Cáladan</h4>
                 <p>NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.a</p>
 
-                <a>About NASA's Mission</a>
+                <a href="#">About NASA's Mission</a>
                 <a class="link-externo" href="">Join Us <i class="link-icone fa-solid fa-circle-right"></i></a>
-            </section>
+            </div>
 
-            <section class="rodape__navegacao">
+            <nav class="rodape__navegacao">
                 <a href="">Home</a>
                 <a href="">News & Events</a>
                 <a href="">Multimedia</a>
@@ -130,9 +132,9 @@
                 <a href="">Learning Resources</a>
                 <a href="">About NASA</a>
                 <a href="">NASA en Español</a>
-            </section>
+            </nav>
 
-            <section class="creditos">
+            <div class="creditos">
                 <h4>Criador do Site: <strong>Everton R. da Paixão</strong></h4>
 
                 <span>Siga nas Redes</span>
@@ -156,9 +158,9 @@
 
                 <a href="">More NASA Social Accounts</a>
                 <a href="">NASA Newsletters</a>
-            </section>
+            </div>
 
-            <section class="rodape__adicionais">
+            <nav class="rodape__adicionais">
                 <a href="">Sitemap</a>
                 <a href="">Office of the IG</a>
                 <a href="">For Media</a>
@@ -170,8 +172,8 @@
                 <a href="">Contact NASA</a>
                 <a href="">No FEAR Act</a>
                 <a href="">Accessibility</a>
-            </section>
-        </nav>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
