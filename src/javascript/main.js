@@ -25,12 +25,10 @@ function modifyNavigation(){
 // ==================== EVENTS ==================== //
 const burgerMenu = document.querySelector(".header__menu-toggle")
 burgerMenu.addEventListener("click", () => {
-    headerNav.classList.toggle("header__nav--hidden")
+    headerNav.classList.toggle("header__nav--open")
 })
+
+window.addEventListener("resize", modifyNavigation)
 
 const nextButton = document.querySelector(".explore__button")
 nextButton.addEventListener("click", modifyNavigation)
-window.addEventListener("resize", modifyNavigation)
-
-
-
