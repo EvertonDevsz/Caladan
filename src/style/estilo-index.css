@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root{
@@ -12,11 +11,18 @@
     --secondary-light: #9299a3;
 
     --main-special: #800b1f;
-    --secondary--special: #ca1130;
+    --secondary-special: #ca1130;
 
     /*TYPOGRAPHY*/
-    --section-title: "Oswald", sans-serif;
+    --section-title-font: "Oswald", sans-serif;
     --font-body: "Source Code Pro", monospace;
+
+    --text-sm: 0.9rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+
+    --caption-text: 0.8rem;
+    --text-article-title: 2.875rem;
 }
 
 *{
@@ -50,7 +56,7 @@ header{
     width: 27px;
     border: none;
     color: var(--main-light);
-    font-size: 1.4em;
+    font-size: 1.4rem;
     background-color: var(--main-dark);
     cursor: pointer;
 }
@@ -117,7 +123,7 @@ header{
 }
 
 .hero__title{
-    font-size: 5em;
+    font-size: 5rem;
     line-height: 1.1;
 }
 
@@ -125,7 +131,7 @@ header{
     padding-left: 3px;
     color: var(--secondary-light);
     font-family: var(--font-body);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .explore{
@@ -146,8 +152,8 @@ header{
 }
 
 .explore__title{
-    font-family: var(--section-title);
-    font-size: 18px;
+    font-family: var(--section-title-font);
+    font-size: var(--text-lg);
     font-weight: normal;
 }
 
@@ -175,7 +181,7 @@ header{
     flex: 0 0 100%;
 
     font-family: var(--font-body);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 .card__image-link{
@@ -239,8 +245,8 @@ header{
     margin-top: 45px;
     padding-inline: 15px;
 
-    font-family: var(--section-title);
-    font-size: 1.125rem;
+    font-family: var(--section-title-font);
+    font-size: var(--text-lg);
     font-weight: normal;
 }
 
@@ -252,14 +258,14 @@ header{
 .article__title{
     margin-bottom: 35px;
     color: var(--secondary-dark);
-    font-size: 2.875rem;
+    font-size: var(--text-article-title);
     line-height: 1.1;
 }
 
 .article__body p{
     margin-bottom: 20px;
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-weight: 500;
     line-height: 1.6;
     text-indent: 15px;
@@ -271,23 +277,23 @@ header{
 }
 
 .article__body p > a:hover{
-    color: var(--secondary--special);
+    color: var(--secondary-special);
 }
 
 .external-link{
     color: var(--main-dark);
-    font-size: 1.5rem;
-    font-weight: bold; 
+    font-size: var(--text-lg);
+    font-weight: bold;
     text-decoration: none;
 }
 
 .external-link:hover .link-icon{
-    color: var(--secondary--special);
+    color: var(--secondary-special);
 }
 
 .link-icon{
     color: var(--main-special);
-    font-size: 1.125rem;
+    font-size: var(--text-lg);
     transition: color 0.2s;
 }
 
@@ -302,7 +308,7 @@ header{
 
 .article__caption{
     color: var(--dark-details);
-    font-size: 0.8rem;
+    font-size: var(--caption-text);
     line-height: 1.5;
     text-align: justify;
 }
@@ -319,7 +325,7 @@ header{
 
 .footer a{
     color: var(--main-light);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     text-decoration: none;
 }
 
@@ -347,7 +353,7 @@ header{
 
 .footer__brand p{
     color: var(--secondary-light);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     line-height: 1.5;
 }
 
@@ -370,7 +376,7 @@ header{
 
 .credit strong{
     color: var(--secondary-light);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-style: italic;
 }
 
@@ -390,7 +396,6 @@ header{
     margin-right: 10px;
     padding: 8px;
     
-    font-size: 1.2rem;
     background-color: var(--secondary-dark);
     cursor: pointer;
     transition: background-color 0.2s;
