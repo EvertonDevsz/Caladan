@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/*
+  BREAKPOINTS
+  Principais — mudanças estruturais de layout
+    sm:  640px  → footer em grid
+    md:  1024px → header desktop, artigo em colunas
+    lg:  1390px → layout final largo
+
+  Ajuste — comportamento específico do carrossel
+    card-2col: 800px
+    card-3col: 1190px
+*/
+
 :root{
-    /* COLORS */
+    /* CORES */
     --main-dark: #000000;
     --secondary-dark: #2a2d36;
     --dark-details: #686868;
@@ -13,7 +25,7 @@
     --main-special: #800b1f;
     --secondary-special: #ca1130;
 
-    /*TYPOGRAPHY*/
+    /*TIPOGRAFIA*/
     --section-title-font: "Oswald", sans-serif;
     --font-body: "Source Code Pro", monospace;
 
@@ -374,10 +386,13 @@ header{
     gap: 15px;
 }
 
+.credit{
+    font-style: italic;
+    font-size: var(--text-sm);
+}
+
 .credit strong{
     color: var(--secondary-light);
-    font-size: var(--text-sm);
-    font-style: italic;
 }
 
 .footer__credits p > span{
@@ -424,6 +439,8 @@ header{
 }
 
 /* === MEDIA QUERIES === */
+
+/* sm — layout do footer */
 @media screen and (min-width: 640px){
     .footer__wrapper{
         display: grid;
@@ -449,12 +466,14 @@ header{
     }
 }
 
+/* ajuste — carrossel 2 colunas */
 @media screen and (min-width: 800px){
     .card{
         flex: 0 0 50%;
     }
 }
 
+/* md — header desktop, artigos */
 @media screen and (min-width: 1024px){
     .header__wrapper{
         display: flex;
@@ -512,12 +531,14 @@ header{
     }
 }
 
+/* ajuste — carrossel 3 colunas */
 @media screen and (min-width: 1190px){
     .card{
         flex: 0 0 33%;
     }
 }
 
+/* lg — layout final largo*/
 @media screen and (min-width: 1390px){
     .card{
         flex: 0 0 25%;
